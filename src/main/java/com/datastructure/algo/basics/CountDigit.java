@@ -60,7 +60,22 @@ public class CountDigit {
             In conclusion, the time complexity of the given code is O(log N) and the space complexity is O(1).
          */
 //        Solution - 2
-        return String.valueOf(number).length();
+//        return String.valueOf(number).length();
+
+        /*
+        Time Complexity:
+
+            The time complexity of this code is O(1), which means constant time complexity.
+            This is because the code only performs a single operation: calculating the logarithm base 10 of the number. The time taken by this operation does not depend on the size of the input number.
+
+        Space Complexity:
+
+            The space complexity of this code is also O(1), which means constant space complexity. This is because the code does not use any additional space that scales with the input size. The code only uses a fixed amount of space to store the input number and the result of the logarithm operation.
+
+            In conclusion, the time complexity of the given code is O(1) and the space complexity is O(1).
+         */
+//       Solution - 3
+        return (int) Math.floor(Math.log10(number) + 1);
     }
 
 }
