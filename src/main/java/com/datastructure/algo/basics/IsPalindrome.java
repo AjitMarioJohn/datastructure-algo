@@ -18,6 +18,13 @@ public class IsPalindrome {
         return solution1(number);
     }
 
+    /*
+    The time complexity of the code is O(log n), where n is the input number. This is because the StringBuilder's reverse() method iterates over each character in the string once. Since the number of characters in the string is proportional to the number of digits in the input number, the time complexity is O(log n).
+
+    The space complexity of the code is also O(log n), where n is the input number. This is because the StringBuilder's capacity is proportional to the number of digits in the input number. The space complexity is determined by the amount of memory allocated to store the characters in the StringBuilder. Since the number of characters is proportional to the number of digits in the input number, the space complexity is O(log n).
+
+    In terms of optimization, the code is already efficient as it uses a StringBuilder, which is a mutable sequence of characters. The time complexity of O(log n) is the best possible time complexity for this problem, as we have to process each digit in the input number once. The space complexity of O(log n) is also optimal, as we need to store each digit in the input number.
+     */
     private boolean solution1(int number) {
         String numStr = String.valueOf(number);
         StringBuilder sb = new StringBuilder(numStr);
