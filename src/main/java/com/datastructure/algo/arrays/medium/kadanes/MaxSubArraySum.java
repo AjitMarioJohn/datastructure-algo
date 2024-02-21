@@ -1,4 +1,4 @@
-package com.datastructure.algo.arrays.medium;
+package com.datastructure.algo.arrays.medium.kadanes;
 
 /**
  * Kadane’s Algorithm : Maximum Subarray Sum in an Array

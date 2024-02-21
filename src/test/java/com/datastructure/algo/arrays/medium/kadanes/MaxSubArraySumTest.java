@@ -1,5 +1,6 @@
-package com.datastructure.algo.arrays.medium;
+package com.datastructure.algo.arrays.medium.kadanes;
 
+import com.datastructure.algo.arrays.medium.kadanes.MaxSubArraySum;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;

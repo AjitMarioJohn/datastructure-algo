@@ -4,14 +4,33 @@ import java.util.Arrays;
 
 public class Testing {
     public static void main(String[] args) {
-        int[] hash = new int[5+1];
-        int[] arr = new int[] {3,5,4,2};
+        int[] arr = {-2, 1, -3, 4, -1, 2, 1, -5, 4};
+        System.out.println(Arrays.toString(maxSubarray(arr)));
+    }
 
-        for (int i : arr) {
-            hash[i]++;
+    public static int[] maxSubarray(int[] arr) {
+        System.out.println(Arrays.toString(arr));;
+        int maxSum = Integer.MIN_VALUE;
+        int start = 0;
+        int end = 0;
+        int tempStart = 0;
+
+        for (int i = 0; i < arr.length; i++) {
+            if (arr[i] > maxSum + arr[i]) {
+                maxSum = arr[i];
+                start = i;
+            } else {
+                maxSum += arr[i];
+            }
+
+            if (maxSum > 0) {
+                end = i;
+            } else if (maxSum <= 0) {
+                maxSum = 0;
+                tempStart = i + 1;
+            }
         }
 
-        System.out.println(Arrays.toString(arr));
-        System.out.println(Arrays.toString(hash));
+        return Arrays.copyOfRange(arr, start, end + 1);
     }
 }
